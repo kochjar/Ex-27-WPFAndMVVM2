@@ -35,5 +35,10 @@ namespace WPFAndMVVM2
 
 
         }
+
+        private void TilføjPerson_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
