@@ -31,14 +31,22 @@ namespace WPFAndMVVM2
             InitializeComponent();
 
             DataContext = mvm;
-            
-
 
         }
 
         private void TilføjPerson_Click(object sender, RoutedEventArgs e)
         {
+            mvm.AddDefaultPerson();
+        }
 
+        private void SletPerson_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.DeleteSelectedPerson();
+        }
+
+        private void Listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mvm.UpdateCurrentPerson();
         }
     }
 }

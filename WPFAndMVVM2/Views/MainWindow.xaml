@@ -17,7 +17,7 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ListBox Grid.Row="0" ItemsSource="{Binding PersonsVM}" SelectedItem="{Binding currentPerson}">
+            <ListBox Grid.Row="0" ItemsSource="{Binding PersonsVM}" SelectedItem="{Binding currentPerson}" SelectionChanged="Listbox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -42,7 +42,8 @@
             <Label Content="LastName:" HorizontalAlignment="Left" Margin="72,158,0,0" VerticalAlignment="Top" Width="66"/>
             <Label Content="Age:" HorizontalAlignment="Left" Margin="72,207,0,0" VerticalAlignment="Top"/>
             <Label Content="Phone:" HorizontalAlignment="Left" Margin="72,258,0,0" VerticalAlignment="Top"/>
-
+            <Button x:Name="btnNewPerson" Content="New" HorizontalAlignment="Left" Margin="175,64,0,0" VerticalAlignment="Top" Height="21" Width="100" Click="TilføjPerson_Click"/>
+            <Button x:Name="btnDeletePerson" Content="Delete" HorizontalAlignment="Left" Margin="280,64,0,0" VerticalAlignment="Top" Height="21" Width="100" Click="SletPerson_Click"/>
         </Grid>
     </Grid>
 </Window>
