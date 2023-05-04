@@ -22,6 +22,7 @@ namespace WPFAndMVVM2.ViewModels
 
         public PersonViewModel currentPerson { get; set; }
         public ObservableCollection<PersonViewModel> PersonsVM { get; set; }
+
         public MainViewModel()
         { 
             PersonsVM = new ObservableCollection<PersonViewModel>();
@@ -39,10 +40,8 @@ namespace WPFAndMVVM2.ViewModels
 
         public void DeleteSelectedPerson()
         {
-            Debug.WriteLine(personRepo.GetAll().Count);
             currentPerson.DeletePerson(personRepo);
             PersonsVM.Remove(currentPerson);
-            Debug.WriteLine(personRepo.GetAll().Count);
         }
 
         public void AddDefaultPerson()
